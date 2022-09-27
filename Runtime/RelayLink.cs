@@ -1,8 +1,7 @@
 ﻿using System;
-using Sigtrap.Relays;
 
 #region Interfaces
-namespace Sigtrap.Relays {
+namespace Yube.Relays {
 	public interface IRelayLinkBase<TDelegate> where TDelegate:class {
 		/// <summary>
 		/// How many persistent listeners does this intance currently have?
@@ -73,7 +72,7 @@ namespace Sigtrap.Relays {
 #endregion
 
 #region Implementation
-namespace Sigtrap.Relays.Link {
+namespace Yube.Relays.Link {
 	public abstract class RelayLinkBase<TDelegate> : IRelayLinkBase<TDelegate> where TDelegate:class {
 		protected RelayBase<TDelegate> _relay;
 

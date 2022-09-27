@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-#region Interface
-namespace Sigtrap.Relays {
+﻿#region Interface
+namespace Yube.Relays {
 	public interface IRelayBinding {
 		/// <summary>
 		/// Is the listener currently subscribed to the Relay?
@@ -28,7 +24,7 @@ namespace Sigtrap.Relays {
 #endregion
 
 #region Implementation
-namespace Sigtrap.Relays.Binding {
+namespace Yube.Relays.Binding {
 	public class RelayBinding<TDelegate> : IRelayBinding where TDelegate:class {
 		protected IRelayLinkBase<TDelegate> _relay {get; private set;}
 		protected TDelegate _listener {get;	private set;}

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace Sigtrap.Relays.Tests {
+namespace Yube.Relays.Tests {
 	public class RelayTests {
 		int calls;
 

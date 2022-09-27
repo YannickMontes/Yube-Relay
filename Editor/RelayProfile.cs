@@ -5,9 +5,9 @@ using UnityEditor;
 #endif
 using System.Collections;
 using System.Collections.Generic;
-using Sigtrap.Relays;
+using Yube.Relays;
 
-namespace Sigtrap.Relays.Tests {
+namespace Yube.Relays.Tests {
 	public static class RelayProfile {
 		const int LOOPS = 100000;
 		const int DELEGATES = 10;

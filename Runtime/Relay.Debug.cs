@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Diagnostics;
 
-namespace Sigtrap.Relays {
+namespace Yube.Relays {
 	public static class _RelayDebugger {
 		class ListenerData {
 			public object owner { get; private set; }
@@ -106,12 +106,12 @@ namespace Sigtrap.Relays {
 			>
 		> _listenerData = new Dictionary<object, Dictionary<object, Dictionary<MethodInfo,ListenerData>>>();
 
-		#if UNITY_EDITOR	
+#if UNITY_EDITOR
 		[UnityEditor.MenuItem("Relay/Log Listeners")]
 		public static void LogRelaysEditor(){
 			UnityEngine.Debug.Log(LogRelays());
 		}
-		#endif
+#endif
 
 		/// <summary>
 		/// Output a log of all existing Relays and their listeners.

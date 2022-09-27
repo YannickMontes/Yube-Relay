@@ -34,10 +34,10 @@
  */
 
 using System;
-using Sigtrap.Relays.Link;
-using Sigtrap.Relays.Binding;
+using Yube.Relays.Link;
+using Yube.Relays.Binding;
 
-namespace Sigtrap.Relays {
+namespace Yube.Relays {
 	public abstract class RelayBase<TDelegate> : IRelayLinkBase<TDelegate> where TDelegate:class {
 		/// <summary>
 		/// How many persistent listeners does this intance currently have?
