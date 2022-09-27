@@ -61,7 +61,7 @@ namespace Yube.Relays {
 
 		protected static IndexOutOfRangeException _eIOOR = new IndexOutOfRangeException("Fewer listeners than expected. See guidelines in Relay.cs on using RemoveListener and RemoveAll within Relay listeners.");
 
-		#if SIGTRAP_RELAY_DBG
+#if SIGTRAP_RELAY_DBG
 		/// <summary>
 		/// If true, RelayDebugger will automatically record all listener addition and removal on all Relays.
 		/// This allows a dump of all Relay data to aid diagnosis of lapsed listeners etc.
@@ -85,9 +85,28 @@ namespace Yube.Relays {
 		public static string LogRelays(object observer){
 			return _RelayDebugger.LogRelays(observer);
 		}
-		#endif
+#endif
 
 		#region API
+
+		/// <summary>
+		/// Register a listener to relay.
+		/// </summary>
+		/// <param name="listener">The method to add/remove</param>
+		/// <param name="register">Should we add or remove ?</param>
+		/// <param name="allowDuplicates">Is it ok to have duplicates ?</param>
+		public void RegisterListener(TDelegate listener, bool register, bool allowDuplicates = false)
+		{
+			if (register)
+			{
+				AddListener(listener, allowDuplicates);
+			}
+			else
+			{
+				RemoveListener(listener);
+			}
+		}
+
 		/// <summary>
 		/// Is this delegate already a persistent listener?
 		/// Does NOT query one-time listeners.
