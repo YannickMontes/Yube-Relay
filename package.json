@@ -1,0 +1,14 @@
+{
+  "name": "com.yannickmontes.yube-relay",
+  "version": "1.0.0",
+  "displayName": "Relay",
+  "description": "Fast, light, GC-friendly C# signals/events for Unity. (Forked from: https://github.com/SixWays/Relay)",
+  "unity": "2021.3",
+  "dependencies": {
+  },
+  "author": {
+    "name": "Yannick Montes",
+    "email": "montes.yannick@gmail.com",
+    "url": "http://yannickmontes.fr"
+  }
+}
