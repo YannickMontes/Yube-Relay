@@ -1,7 +1,7 @@
 {
-  "name": "com.yannickmontes.yube.relay",
+  "name": "com.yannickmontes.yube.relays",
   "version": "1.0.0",
-  "displayName": "Yube.Relays",
+  "displayName": "Yube Relays",
   "description": "Fast, light, GC-friendly C# signals/events for Unity. (Forked from: https://github.com/SixWays/Relay)",
   "unity": "2021.3",
   "dependencies": {
